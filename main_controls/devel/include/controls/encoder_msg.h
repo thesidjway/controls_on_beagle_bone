@@ -24,21 +24,21 @@ struct encoder_msg_
   typedef encoder_msg_<ContainerAllocator> Type;
 
   encoder_msg_()
-    : left_rpm(0.0)
-    , right_rpm(0.0)  {
+    : left_vel(0.0)
+    , right_vel(0.0)  {
     }
   encoder_msg_(const ContainerAllocator& _alloc)
-    : left_rpm(0.0)
-    , right_rpm(0.0)  {
+    : left_vel(0.0)
+    , right_vel(0.0)  {
     }
 
 
 
-   typedef float _left_rpm_type;
-  _left_rpm_type left_rpm;
+   typedef float _left_vel_type;
+  _left_vel_type left_vel;
 
-   typedef float _right_rpm_type;
-  _right_rpm_type right_rpm;
+   typedef float _right_vel_type;
+  _right_vel_type right_vel;
 
 
 
@@ -117,12 +117,12 @@ struct MD5Sum< ::controls::encoder_msg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "fb0186777139ed5386fa80048788f9b4";
+    return "74ad8f7ea4d888606e4f41069cec47ff";
   }
 
   static const char* value(const ::controls::encoder_msg_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xfb0186777139ed53ULL;
-  static const uint64_t static_value2 = 0x86fa80048788f9b4ULL;
+  static const uint64_t static_value1 = 0x74ad8f7ea4d88860ULL;
+  static const uint64_t static_value2 = 0x6e4f41069cec47ffULL;
 };
 
 template<class ContainerAllocator>
@@ -141,8 +141,8 @@ struct Definition< ::controls::encoder_msg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "float32 left_rpm	\n\
-float32 right_rpm\n\
+    return "float32 left_vel	\n\
+float32 right_vel\n\
 ";
   }
 
@@ -161,8 +161,8 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.left_rpm);
-      stream.next(m.right_rpm);
+      stream.next(m.left_vel);
+      stream.next(m.right_vel);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER;
@@ -181,10 +181,10 @@ struct Printer< ::controls::encoder_msg_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::controls::encoder_msg_<ContainerAllocator>& v)
   {
-    s << indent << "left_rpm: ";
-    Printer<float>::stream(s, indent + "  ", v.left_rpm);
-    s << indent << "right_rpm: ";
-    Printer<float>::stream(s, indent + "  ", v.right_rpm);
+    s << indent << "left_vel: ";
+    Printer<float>::stream(s, indent + "  ", v.left_vel);
+    s << indent << "right_vel: ";
+    Printer<float>::stream(s, indent + "  ", v.right_vel);
   }
 };
 

@@ -196,6 +196,7 @@ SET(CMAKE_DEPEND_INFO_FILES
   "controls/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "controls/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "controls/CMakeFiles/geometry_msgs_generate_messages_py.dir/DependInfo.cmake"
+  "controls/CMakeFiles/overriding_node.dir/DependInfo.cmake"
   "controls/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake"
   "controls/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake"
   "controls/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake"
@@ -209,5 +210,6 @@ SET(CMAKE_DEPEND_INFO_FILES
   "controls/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "controls/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake"
   "controls/CMakeFiles/test_encoders.dir/DependInfo.cmake"
-  "controls/CMakeFiles/xbox_node.dir/DependInfo.cmake"
+  "controls/CMakeFiles/vspid_node.dir/DependInfo.cmake"
+  "controls/CMakeFiles/wpid_node.dir/DependInfo.cmake"
   )

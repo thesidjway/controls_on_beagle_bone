@@ -4,7 +4,7 @@
 
 void chatterCallback(const controls::encoder_msg::ConstPtr& msg)
 {
-  std::cout<<"Left Wheel: "<< msg->left_rpm << "Right Wheel: "<< msg->right_rpm << std::endl; 
+  std::cout<<"Left Wheel: "<< msg->left_vel << "Right Wheel: "<< msg->right_vel << std::endl; 
 }
 
 int main(int argc, char **argv)

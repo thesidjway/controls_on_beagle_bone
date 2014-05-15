@@ -6,14 +6,14 @@ import struct
 
 
 class encoder_msg(genpy.Message):
-  _md5sum = "fb0186777139ed5386fa80048788f9b4"
+  _md5sum = "74ad8f7ea4d888606e4f41069cec47ff"
   _type = "controls/encoder_msg"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """float32 left_rpm	
-float32 right_rpm
+  _full_text = """float32 left_vel	
+float32 right_vel
 
 """
-  __slots__ = ['left_rpm','right_rpm']
+  __slots__ = ['left_vel','right_vel']
   _slot_types = ['float32','float32']
 
   def __init__(self, *args, **kwds):
@@ -24,7 +24,7 @@ float32 right_rpm
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       left_rpm,right_rpm
+       left_vel,right_vel
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -33,13 +33,13 @@ float32 right_rpm
     if args or kwds:
       super(encoder_msg, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
-      if self.left_rpm is None:
-        self.left_rpm = 0.
-      if self.right_rpm is None:
-        self.right_rpm = 0.
+      if self.left_vel is None:
+        self.left_vel = 0.
+      if self.right_vel is None:
+        self.right_vel = 0.
     else:
-      self.left_rpm = 0.
-      self.right_rpm = 0.
+      self.left_vel = 0.
+      self.right_vel = 0.
 
   def _get_types(self):
     """
@@ -54,7 +54,7 @@ float32 right_rpm
     """
     try:
       _x = self
-      buff.write(_struct_2f.pack(_x.left_rpm, _x.right_rpm))
+      buff.write(_struct_2f.pack(_x.left_vel, _x.right_vel))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -68,7 +68,7 @@ float32 right_rpm
       _x = self
       start = end
       end += 8
-      (_x.left_rpm, _x.right_rpm,) = _struct_2f.unpack(str[start:end])
+      (_x.left_vel, _x.right_vel,) = _struct_2f.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -82,7 +82,7 @@ float32 right_rpm
     """
     try:
       _x = self
-      buff.write(_struct_2f.pack(_x.left_rpm, _x.right_rpm))
+      buff.write(_struct_2f.pack(_x.left_vel, _x.right_vel))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -97,7 +97,7 @@ float32 right_rpm
       _x = self
       start = end
       end += 8
-      (_x.left_rpm, _x.right_rpm,) = _struct_2f.unpack(str[start:end])
+      (_x.left_vel, _x.right_vel,) = _struct_2f.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill

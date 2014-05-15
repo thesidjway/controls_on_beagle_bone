@@ -360,6 +360,20 @@ geometry_msgs_generate_messages_py/fast:
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+controls/CMakeFiles/overriding_node.dir/rule:
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f CMakeFiles/Makefile2 controls/CMakeFiles/overriding_node.dir/rule
+.PHONY : controls/CMakeFiles/overriding_node.dir/rule
+
+# Convenience name for target.
+overriding_node: controls/CMakeFiles/overriding_node.dir/rule
+.PHONY : overriding_node
+
+# fast build rule for target.
+overriding_node/fast:
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/build
+.PHONY : overriding_node/fast
+
+# Convenience name for target.
 controls/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
 	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f CMakeFiles/Makefile2 controls/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : controls/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
@@ -542,25 +556,40 @@ test_encoders/fast:
 .PHONY : test_encoders/fast
 
 # Convenience name for target.
-controls/CMakeFiles/xbox_node.dir/rule:
-	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f CMakeFiles/Makefile2 controls/CMakeFiles/xbox_node.dir/rule
-.PHONY : controls/CMakeFiles/xbox_node.dir/rule
+controls/CMakeFiles/vspid_node.dir/rule:
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f CMakeFiles/Makefile2 controls/CMakeFiles/vspid_node.dir/rule
+.PHONY : controls/CMakeFiles/vspid_node.dir/rule
 
 # Convenience name for target.
-xbox_node: controls/CMakeFiles/xbox_node.dir/rule
-.PHONY : xbox_node
+vspid_node: controls/CMakeFiles/vspid_node.dir/rule
+.PHONY : vspid_node
 
 # fast build rule for target.
-xbox_node/fast:
-	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/build
-.PHONY : xbox_node/fast
+vspid_node/fast:
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/vspid_node.dir/build.make controls/CMakeFiles/vspid_node.dir/build
+.PHONY : vspid_node/fast
+
+# Convenience name for target.
+controls/CMakeFiles/wpid_node.dir/rule:
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f CMakeFiles/Makefile2 controls/CMakeFiles/wpid_node.dir/rule
+.PHONY : controls/CMakeFiles/wpid_node.dir/rule
+
+# Convenience name for target.
+wpid_node: controls/CMakeFiles/wpid_node.dir/rule
+.PHONY : wpid_node
+
+# fast build rule for target.
+wpid_node/fast:
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/wpid_node.dir/build.make controls/CMakeFiles/wpid_node.dir/build
+.PHONY : wpid_node/fast
 
 src/BlackCore.o: src/BlackCore.cpp.o
 .PHONY : src/BlackCore.o
 
 # target to build an object file
 src/BlackCore.cpp.o:
-	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/src/BlackCore.cpp.o
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/src/BlackCore.cpp.o
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/vspid_node.dir/build.make controls/CMakeFiles/vspid_node.dir/src/BlackCore.cpp.o
 .PHONY : src/BlackCore.cpp.o
 
 src/BlackCore.i: src/BlackCore.cpp.i
@@ -568,7 +597,8 @@ src/BlackCore.i: src/BlackCore.cpp.i
 
 # target to preprocess a source file
 src/BlackCore.cpp.i:
-	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/src/BlackCore.cpp.i
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/src/BlackCore.cpp.i
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/vspid_node.dir/build.make controls/CMakeFiles/vspid_node.dir/src/BlackCore.cpp.i
 .PHONY : src/BlackCore.cpp.i
 
 src/BlackCore.s: src/BlackCore.cpp.s
@@ -576,7 +606,8 @@ src/BlackCore.s: src/BlackCore.cpp.s
 
 # target to generate assembly for a file
 src/BlackCore.cpp.s:
-	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/src/BlackCore.cpp.s
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/src/BlackCore.cpp.s
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/vspid_node.dir/build.make controls/CMakeFiles/vspid_node.dir/src/BlackCore.cpp.s
 .PHONY : src/BlackCore.cpp.s
 
 src/BlackGPIO.o: src/BlackGPIO.cpp.o
@@ -584,7 +615,7 @@ src/BlackGPIO.o: src/BlackGPIO.cpp.o
 
 # target to build an object file
 src/BlackGPIO.cpp.o:
-	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/src/BlackGPIO.cpp.o
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/src/BlackGPIO.cpp.o
 .PHONY : src/BlackGPIO.cpp.o
 
 src/BlackGPIO.i: src/BlackGPIO.cpp.i
@@ -592,7 +623,7 @@ src/BlackGPIO.i: src/BlackGPIO.cpp.i
 
 # target to preprocess a source file
 src/BlackGPIO.cpp.i:
-	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/src/BlackGPIO.cpp.i
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/src/BlackGPIO.cpp.i
 .PHONY : src/BlackGPIO.cpp.i
 
 src/BlackGPIO.s: src/BlackGPIO.cpp.s
@@ -600,7 +631,7 @@ src/BlackGPIO.s: src/BlackGPIO.cpp.s
 
 # target to generate assembly for a file
 src/BlackGPIO.cpp.s:
-	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/src/BlackGPIO.cpp.s
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/src/BlackGPIO.cpp.s
 .PHONY : src/BlackGPIO.cpp.s
 
 src/BlackPWM.o: src/BlackPWM.cpp.o
@@ -608,7 +639,8 @@ src/BlackPWM.o: src/BlackPWM.cpp.o
 
 # target to build an object file
 src/BlackPWM.cpp.o:
-	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/src/BlackPWM.cpp.o
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/src/BlackPWM.cpp.o
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/vspid_node.dir/build.make controls/CMakeFiles/vspid_node.dir/src/BlackPWM.cpp.o
 .PHONY : src/BlackPWM.cpp.o
 
 src/BlackPWM.i: src/BlackPWM.cpp.i
@@ -616,7 +648,8 @@ src/BlackPWM.i: src/BlackPWM.cpp.i
 
 # target to preprocess a source file
 src/BlackPWM.cpp.i:
-	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/src/BlackPWM.cpp.i
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/src/BlackPWM.cpp.i
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/vspid_node.dir/build.make controls/CMakeFiles/vspid_node.dir/src/BlackPWM.cpp.i
 .PHONY : src/BlackPWM.cpp.i
 
 src/BlackPWM.s: src/BlackPWM.cpp.s
@@ -624,8 +657,33 @@ src/BlackPWM.s: src/BlackPWM.cpp.s
 
 # target to generate assembly for a file
 src/BlackPWM.cpp.s:
-	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/src/BlackPWM.cpp.s
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/src/BlackPWM.cpp.s
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/vspid_node.dir/build.make controls/CMakeFiles/vspid_node.dir/src/BlackPWM.cpp.s
 .PHONY : src/BlackPWM.cpp.s
+
+src/W_PID.o: src/W_PID.cpp.o
+.PHONY : src/W_PID.o
+
+# target to build an object file
+src/W_PID.cpp.o:
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/wpid_node.dir/build.make controls/CMakeFiles/wpid_node.dir/src/W_PID.cpp.o
+.PHONY : src/W_PID.cpp.o
+
+src/W_PID.i: src/W_PID.cpp.i
+.PHONY : src/W_PID.i
+
+# target to preprocess a source file
+src/W_PID.cpp.i:
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/wpid_node.dir/build.make controls/CMakeFiles/wpid_node.dir/src/W_PID.cpp.i
+.PHONY : src/W_PID.cpp.i
+
+src/W_PID.s: src/W_PID.cpp.s
+.PHONY : src/W_PID.s
+
+# target to generate assembly for a file
+src/W_PID.cpp.s:
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/wpid_node.dir/build.make controls/CMakeFiles/wpid_node.dir/src/W_PID.cpp.s
+.PHONY : src/W_PID.cpp.s
 
 src/encoders.o: src/encoders.cpp.o
 .PHONY : src/encoders.o
@@ -675,6 +733,30 @@ src/eqep.cpp.s:
 	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/encoders.dir/build.make controls/CMakeFiles/encoders.dir/src/eqep.cpp.s
 .PHONY : src/eqep.cpp.s
 
+src/overriding_layer.o: src/overriding_layer.cpp.o
+.PHONY : src/overriding_layer.o
+
+# target to build an object file
+src/overriding_layer.cpp.o:
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/src/overriding_layer.cpp.o
+.PHONY : src/overriding_layer.cpp.o
+
+src/overriding_layer.i: src/overriding_layer.cpp.i
+.PHONY : src/overriding_layer.i
+
+# target to preprocess a source file
+src/overriding_layer.cpp.i:
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/src/overriding_layer.cpp.i
+.PHONY : src/overriding_layer.cpp.i
+
+src/overriding_layer.s: src/overriding_layer.cpp.s
+.PHONY : src/overriding_layer.s
+
+# target to generate assembly for a file
+src/overriding_layer.cpp.s:
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/src/overriding_layer.cpp.s
+.PHONY : src/overriding_layer.cpp.s
+
 src/test_encoder.o: src/test_encoder.cpp.o
 .PHONY : src/test_encoder.o
 
@@ -699,29 +781,29 @@ src/test_encoder.cpp.s:
 	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/test_encoders.dir/build.make controls/CMakeFiles/test_encoders.dir/src/test_encoder.cpp.s
 .PHONY : src/test_encoder.cpp.s
 
-src/xbox_node.o: src/xbox_node.cpp.o
-.PHONY : src/xbox_node.o
+src/vs_pid.o: src/vs_pid.cpp.o
+.PHONY : src/vs_pid.o
 
 # target to build an object file
-src/xbox_node.cpp.o:
-	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/src/xbox_node.cpp.o
-.PHONY : src/xbox_node.cpp.o
+src/vs_pid.cpp.o:
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/vspid_node.dir/build.make controls/CMakeFiles/vspid_node.dir/src/vs_pid.cpp.o
+.PHONY : src/vs_pid.cpp.o
 
-src/xbox_node.i: src/xbox_node.cpp.i
-.PHONY : src/xbox_node.i
+src/vs_pid.i: src/vs_pid.cpp.i
+.PHONY : src/vs_pid.i
 
 # target to preprocess a source file
-src/xbox_node.cpp.i:
-	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/src/xbox_node.cpp.i
-.PHONY : src/xbox_node.cpp.i
+src/vs_pid.cpp.i:
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/vspid_node.dir/build.make controls/CMakeFiles/vspid_node.dir/src/vs_pid.cpp.i
+.PHONY : src/vs_pid.cpp.i
 
-src/xbox_node.s: src/xbox_node.cpp.s
-.PHONY : src/xbox_node.s
+src/vs_pid.s: src/vs_pid.cpp.s
+.PHONY : src/vs_pid.s
 
 # target to generate assembly for a file
-src/xbox_node.cpp.s:
-	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/src/xbox_node.cpp.s
-.PHONY : src/xbox_node.cpp.s
+src/vs_pid.cpp.s:
+	cd /home/debian/controls_on_beagle_bone/main_controls/build && $(MAKE) -f controls/CMakeFiles/vspid_node.dir/build.make controls/CMakeFiles/vspid_node.dir/src/vs_pid.cpp.s
+.PHONY : src/vs_pid.cpp.s
 
 # Help Target
 help:
@@ -749,6 +831,7 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... overriding_node"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
@@ -764,7 +847,8 @@ help:
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... test"
 	@echo "... test_encoders"
-	@echo "... xbox_node"
+	@echo "... vspid_node"
+	@echo "... wpid_node"
 	@echo "... src/BlackCore.o"
 	@echo "... src/BlackCore.i"
 	@echo "... src/BlackCore.s"
@@ -774,18 +858,24 @@ help:
 	@echo "... src/BlackPWM.o"
 	@echo "... src/BlackPWM.i"
 	@echo "... src/BlackPWM.s"
+	@echo "... src/W_PID.o"
+	@echo "... src/W_PID.i"
+	@echo "... src/W_PID.s"
 	@echo "... src/encoders.o"
 	@echo "... src/encoders.i"
 	@echo "... src/encoders.s"
 	@echo "... src/eqep.o"
 	@echo "... src/eqep.i"
 	@echo "... src/eqep.s"
+	@echo "... src/overriding_layer.o"
+	@echo "... src/overriding_layer.i"
+	@echo "... src/overriding_layer.s"
 	@echo "... src/test_encoder.o"
 	@echo "... src/test_encoder.i"
 	@echo "... src/test_encoder.s"
-	@echo "... src/xbox_node.o"
-	@echo "... src/xbox_node.i"
-	@echo "... src/xbox_node.s"
+	@echo "... src/vs_pid.o"
+	@echo "... src/vs_pid.i"
+	@echo "... src/vs_pid.s"
 .PHONY : help
 
 

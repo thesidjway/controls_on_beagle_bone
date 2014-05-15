@@ -1,0 +1,31 @@
+<launch>
+	<param name="Alpha_Max" value="45"/>
+	<param name="Alpha_Min" value="-45"/>
+	<param name="d" value="0.9"/>
+	<param name="r" value="0.7"/>
+	
+<node pkg="joy" type="joy_node" name="joy_node" respawn="true" />
+	
+<node pkg="controls" type="encoders" name="encoders" respawn="true"/>
+	
+<node pkg="controls" type="overriding_layer" name = "overriding_layer"  output="screen"/>
+	
+<node pkg="controls" type="Vs_PID" name="Vs_PID" respawn="true">
+	<param name="Kp_Vs" value="10"/>
+	<param name="Ki_Vs" value="5"/>
+	<param name="Kd_Vs" value="0.02"/>
+	<param name="Vs_PID_loop_rate" value="10"/>
+	<param name="PWM_min" value="15"/>
+	<param name="PWM_max" value="85"/>
+	<param name="PWM_PERIOD_TIME" value="50000000"/>
+</node>
+
+<node pkg="controls" type="W_PID" name="W_PID" respawn="true">
+	<param name="Kp_W" value="10"/>
+	<param name="Ki_W" value="5"/>
+	<param name="Kd_W" value="0.02"/>
+	<param name="W_PID_loop_rate" value="10"/>
+</node>
+	
+</launch>
+ 

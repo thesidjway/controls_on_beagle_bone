@@ -24,7 +24,7 @@ add_message_files(FILES encoder_msg.msg)
 generate_messages(DEPENDENCIES std_msgs)
 
 ## Declare a catkin package
-catkin_package(CATKIN_DEPENDS roscpp joy rospy sensor_msgs std_msgs diagnostic_updater joy message_runtime)
+catkin_package(CATKIN_DEPENDS roscpp joy rospy geometry_msgs sensor_msgs std_msgs diagnostic_updater joy message_runtime)
 
 
 ## Build talker and listener
@@ -32,18 +32,27 @@ include_directories(
 	${catkin_INCLUDE_DIRS}
 	${roscpp_INCLUDE_DIRS}
 	${rospy_INCLUDE_DIRS}
-  )
+)
 
 add_executable(encoders src/encoders.cpp src/eqep.cpp)
 target_link_libraries(encoders ${catkin_LIBRARIES})
+add_dependencies(encoders roscpp std_msgs geometry_msgs )
 
 add_executable(test_encoders src/test_encoder.cpp)
 target_link_libraries(test_encoders ${catkin_LIBRARIES})
 
+add_executable(overriding_node src/overriding_layer.cpp src/BlackGPIO.cpp  src/BlackCore.cpp src/BlackPWM.cpp)
+target_link_libraries(overriding_node ${catkin_LIBRARIES} ) 
+add_dependencies(overriding_node roscpp rospy joy sensor_msgs std_msgs geometry_msgs diagnostic_updater)
 
-add_executable(xbox_node src/xbox_node.cpp src/BlackGPIO.cpp  src/BlackCore.cpp src/BlackPWM.cpp)
-target_link_libraries(xbox_node ${catkin_LIBRARIES} ) 
-add_dependencies(xbox_node roscpp rospy joy sensor_msgs std_msgs diagnostic_updater)
+add_executable(wpid_node src/W_PID.cpp )
+target_link_libraries(wpid_node ${catkin_LIBRARIES})
+add_dependencies(wpid_node roscpp std_msgs geometry_msgs)
+
+add_executable(vspid_node src/vs_pid.cpp src/BlackCore.cpp src/BlackPWM.cpp)
+target_link_libraries(vspid_node ${catkin_LIBRARIES})
+add_dependencies(vspid_node roscpp std_msgs geometry_msgs)
+
 
 
 

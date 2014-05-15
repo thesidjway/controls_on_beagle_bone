@@ -2,8 +2,8 @@
 
 "encoder" node in "controls" package publishes both the rear wheels' RPM as a controls/encoder_msg on the topic "encoders"
 	encoder_msg:
-		float32 left_rpm	
-		float32 right_rpm
+		float32 left_vel	
+		float32 right_vel
 
 
 eQEP2 = "/sys/devices/ocp.2/48304000.epwmss/48304180.eqep"

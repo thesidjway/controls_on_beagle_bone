@@ -260,8 +260,10 @@ clean: gtest/CMakeFiles/gtest_main.dir/clean
 # Convenience name for "all" pass in the directory.
 controls/all: controls/CMakeFiles/controls_generate_messages.dir/all
 controls/all: controls/CMakeFiles/encoders.dir/all
+controls/all: controls/CMakeFiles/overriding_node.dir/all
 controls/all: controls/CMakeFiles/test_encoders.dir/all
-controls/all: controls/CMakeFiles/xbox_node.dir/all
+controls/all: controls/CMakeFiles/vspid_node.dir/all
+controls/all: controls/CMakeFiles/wpid_node.dir/all
 .PHONY : controls/all
 
 # Convenience name for "clean" pass in the directory.
@@ -280,6 +282,7 @@ controls/clean: controls/CMakeFiles/encoders.dir/clean
 controls/clean: controls/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
 controls/clean: controls/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
 controls/clean: controls/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+controls/clean: controls/CMakeFiles/overriding_node.dir/clean
 controls/clean: controls/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 controls/clean: controls/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 controls/clean: controls/CMakeFiles/roscpp_generate_messages_py.dir/clean
@@ -293,7 +296,8 @@ controls/clean: controls/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 controls/clean: controls/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 controls/clean: controls/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 controls/clean: controls/CMakeFiles/test_encoders.dir/clean
-controls/clean: controls/CMakeFiles/xbox_node.dir/clean
+controls/clean: controls/CMakeFiles/vspid_node.dir/clean
+controls/clean: controls/CMakeFiles/wpid_node.dir/clean
 .PHONY : controls/clean
 
 # Convenience name for "preinstall" pass in the directory.
@@ -367,8 +371,8 @@ clean: controls/CMakeFiles/controls_gencpp.dir/clean
 
 # All Build rule for target.
 controls/CMakeFiles/controls_generate_messages.dir/all: controls/CMakeFiles/controls_generate_messages_lisp.dir/all
-controls/CMakeFiles/controls_generate_messages.dir/all: controls/CMakeFiles/controls_generate_messages_py.dir/all
 controls/CMakeFiles/controls_generate_messages.dir/all: controls/CMakeFiles/controls_generate_messages_cpp.dir/all
+controls/CMakeFiles/controls_generate_messages.dir/all: controls/CMakeFiles/controls_generate_messages_py.dir/all
 	$(MAKE) -f controls/CMakeFiles/controls_generate_messages.dir/build.make controls/CMakeFiles/controls_generate_messages.dir/depend
 	$(MAKE) -f controls/CMakeFiles/controls_generate_messages.dir/build.make controls/CMakeFiles/controls_generate_messages.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles 
@@ -403,8 +407,8 @@ clean: controls/CMakeFiles/controls_generate_messages.dir/clean
 # Target rules for target controls/CMakeFiles/controls_generate_messages_cpp.dir
 
 # All Build rule for target.
-controls/CMakeFiles/controls_generate_messages_cpp.dir/all: controls/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 controls/CMakeFiles/controls_generate_messages_cpp.dir/all: controls/CMakeFiles/_controls_generate_messages_check_deps_encoder_msg.dir/all
+controls/CMakeFiles/controls_generate_messages_cpp.dir/all: controls/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f controls/CMakeFiles/controls_generate_messages_cpp.dir/build.make controls/CMakeFiles/controls_generate_messages_cpp.dir/depend
 	$(MAKE) -f controls/CMakeFiles/controls_generate_messages_cpp.dir/build.make controls/CMakeFiles/controls_generate_messages_cpp.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles  1
@@ -435,8 +439,8 @@ clean: controls/CMakeFiles/controls_generate_messages_cpp.dir/clean
 # Target rules for target controls/CMakeFiles/controls_generate_messages_lisp.dir
 
 # All Build rule for target.
-controls/CMakeFiles/controls_generate_messages_lisp.dir/all: controls/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 controls/CMakeFiles/controls_generate_messages_lisp.dir/all: controls/CMakeFiles/_controls_generate_messages_check_deps_encoder_msg.dir/all
+controls/CMakeFiles/controls_generate_messages_lisp.dir/all: controls/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f controls/CMakeFiles/controls_generate_messages_lisp.dir/build.make controls/CMakeFiles/controls_generate_messages_lisp.dir/depend
 	$(MAKE) -f controls/CMakeFiles/controls_generate_messages_lisp.dir/build.make controls/CMakeFiles/controls_generate_messages_lisp.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles  2
@@ -467,8 +471,8 @@ clean: controls/CMakeFiles/controls_generate_messages_lisp.dir/clean
 # Target rules for target controls/CMakeFiles/controls_generate_messages_py.dir
 
 # All Build rule for target.
-controls/CMakeFiles/controls_generate_messages_py.dir/all: controls/CMakeFiles/std_msgs_generate_messages_py.dir/all
 controls/CMakeFiles/controls_generate_messages_py.dir/all: controls/CMakeFiles/_controls_generate_messages_check_deps_encoder_msg.dir/all
+controls/CMakeFiles/controls_generate_messages_py.dir/all: controls/CMakeFiles/std_msgs_generate_messages_py.dir/all
 	$(MAKE) -f controls/CMakeFiles/controls_generate_messages_py.dir/build.make controls/CMakeFiles/controls_generate_messages_py.dir/depend
 	$(MAKE) -f controls/CMakeFiles/controls_generate_messages_py.dir/build.make controls/CMakeFiles/controls_generate_messages_py.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles  3 4
@@ -776,6 +780,41 @@ controls/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
 
 # clean rule for target.
 clean: controls/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target controls/CMakeFiles/overriding_node.dir
+
+# All Build rule for target.
+controls/CMakeFiles/overriding_node.dir/all:
+	$(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/depend
+	$(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles  9 10 11 12
+	@echo "Built target overriding_node"
+.PHONY : controls/CMakeFiles/overriding_node.dir/all
+
+# Include target in all.
+all: controls/CMakeFiles/overriding_node.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+controls/CMakeFiles/overriding_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 controls/CMakeFiles/overriding_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles 0
+.PHONY : controls/CMakeFiles/overriding_node.dir/rule
+
+# Convenience name for target.
+overriding_node: controls/CMakeFiles/overriding_node.dir/rule
+.PHONY : overriding_node
+
+# clean rule for target.
+controls/CMakeFiles/overriding_node.dir/clean:
+	$(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/clean
+.PHONY : controls/CMakeFiles/overriding_node.dir/clean
+
+# clean rule for target.
+clean: controls/CMakeFiles/overriding_node.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -1157,7 +1196,7 @@ clean: controls/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 controls/CMakeFiles/test_encoders.dir/all:
 	$(MAKE) -f controls/CMakeFiles/test_encoders.dir/build.make controls/CMakeFiles/test_encoders.dir/depend
 	$(MAKE) -f controls/CMakeFiles/test_encoders.dir/build.make controls/CMakeFiles/test_encoders.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles  9
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles  13
 	@echo "Built target test_encoders"
 .PHONY : controls/CMakeFiles/test_encoders.dir/all
 
@@ -1186,38 +1225,73 @@ clean: controls/CMakeFiles/test_encoders.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target controls/CMakeFiles/xbox_node.dir
+# Target rules for target controls/CMakeFiles/vspid_node.dir
 
 # All Build rule for target.
-controls/CMakeFiles/xbox_node.dir/all:
-	$(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/depend
-	$(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles  10 11 12 13
-	@echo "Built target xbox_node"
-.PHONY : controls/CMakeFiles/xbox_node.dir/all
+controls/CMakeFiles/vspid_node.dir/all:
+	$(MAKE) -f controls/CMakeFiles/vspid_node.dir/build.make controls/CMakeFiles/vspid_node.dir/depend
+	$(MAKE) -f controls/CMakeFiles/vspid_node.dir/build.make controls/CMakeFiles/vspid_node.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles  14 15 16
+	@echo "Built target vspid_node"
+.PHONY : controls/CMakeFiles/vspid_node.dir/all
 
 # Include target in all.
-all: controls/CMakeFiles/xbox_node.dir/all
+all: controls/CMakeFiles/vspid_node.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-controls/CMakeFiles/xbox_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 controls/CMakeFiles/xbox_node.dir/all
+controls/CMakeFiles/vspid_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 controls/CMakeFiles/vspid_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles 0
-.PHONY : controls/CMakeFiles/xbox_node.dir/rule
+.PHONY : controls/CMakeFiles/vspid_node.dir/rule
 
 # Convenience name for target.
-xbox_node: controls/CMakeFiles/xbox_node.dir/rule
-.PHONY : xbox_node
+vspid_node: controls/CMakeFiles/vspid_node.dir/rule
+.PHONY : vspid_node
 
 # clean rule for target.
-controls/CMakeFiles/xbox_node.dir/clean:
-	$(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/clean
-.PHONY : controls/CMakeFiles/xbox_node.dir/clean
+controls/CMakeFiles/vspid_node.dir/clean:
+	$(MAKE) -f controls/CMakeFiles/vspid_node.dir/build.make controls/CMakeFiles/vspid_node.dir/clean
+.PHONY : controls/CMakeFiles/vspid_node.dir/clean
 
 # clean rule for target.
-clean: controls/CMakeFiles/xbox_node.dir/clean
+clean: controls/CMakeFiles/vspid_node.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target controls/CMakeFiles/wpid_node.dir
+
+# All Build rule for target.
+controls/CMakeFiles/wpid_node.dir/all:
+	$(MAKE) -f controls/CMakeFiles/wpid_node.dir/build.make controls/CMakeFiles/wpid_node.dir/depend
+	$(MAKE) -f controls/CMakeFiles/wpid_node.dir/build.make controls/CMakeFiles/wpid_node.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles  17
+	@echo "Built target wpid_node"
+.PHONY : controls/CMakeFiles/wpid_node.dir/all
+
+# Include target in all.
+all: controls/CMakeFiles/wpid_node.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+controls/CMakeFiles/wpid_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 controls/CMakeFiles/wpid_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/debian/controls_on_beagle_bone/main_controls/build/CMakeFiles 0
+.PHONY : controls/CMakeFiles/wpid_node.dir/rule
+
+# Convenience name for target.
+wpid_node: controls/CMakeFiles/wpid_node.dir/rule
+.PHONY : wpid_node
+
+# clean rule for target.
+controls/CMakeFiles/wpid_node.dir/clean:
+	$(MAKE) -f controls/CMakeFiles/wpid_node.dir/build.make controls/CMakeFiles/wpid_node.dir/clean
+.PHONY : controls/CMakeFiles/wpid_node.dir/clean
+
+# clean rule for target.
+clean: controls/CMakeFiles/wpid_node.dir/clean
 .PHONY : clean
 
 #=============================================================================

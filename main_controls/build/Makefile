@@ -423,6 +423,19 @@ geometry_msgs_generate_messages_py/fast:
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named overriding_node
+
+# Build rule for target.
+overriding_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 overriding_node
+.PHONY : overriding_node
+
+# fast build rule for target.
+overriding_node/fast:
+	$(MAKE) -f controls/CMakeFiles/overriding_node.dir/build.make controls/CMakeFiles/overriding_node.dir/build
+.PHONY : overriding_node/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
 
 # Build rule for target.
@@ -592,17 +605,30 @@ test_encoders/fast:
 .PHONY : test_encoders/fast
 
 #=============================================================================
-# Target rules for targets named xbox_node
+# Target rules for targets named vspid_node
 
 # Build rule for target.
-xbox_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 xbox_node
-.PHONY : xbox_node
+vspid_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vspid_node
+.PHONY : vspid_node
 
 # fast build rule for target.
-xbox_node/fast:
-	$(MAKE) -f controls/CMakeFiles/xbox_node.dir/build.make controls/CMakeFiles/xbox_node.dir/build
-.PHONY : xbox_node/fast
+vspid_node/fast:
+	$(MAKE) -f controls/CMakeFiles/vspid_node.dir/build.make controls/CMakeFiles/vspid_node.dir/build
+.PHONY : vspid_node/fast
+
+#=============================================================================
+# Target rules for targets named wpid_node
+
+# Build rule for target.
+wpid_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wpid_node
+.PHONY : wpid_node
+
+# fast build rule for target.
+wpid_node/fast:
+	$(MAKE) -f controls/CMakeFiles/wpid_node.dir/build.make controls/CMakeFiles/wpid_node.dir/build
+.PHONY : wpid_node/fast
 
 # Help Target
 help:
@@ -638,6 +664,7 @@ help:
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... overriding_node"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
@@ -651,7 +678,8 @@ help:
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... test_encoders"
-	@echo "... xbox_node"
+	@echo "... vspid_node"
+	@echo "... wpid_node"
 .PHONY : help
 
 

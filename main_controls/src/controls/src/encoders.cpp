@@ -18,7 +18,7 @@ int main (int argc, char** argv)
     ros::init(argc,argv,"encoders");
     ros::NodeHandle n;
 	ros::Publisher pub_encoder = n.advertise<controls::encoder_msg>("encoders",1000);
-	ros::Rate loop_rate(100);
+	ros::Rate loop_rate(5);
 
 	
 	//std::string eQEP0 = "/sys/devices/ocp.2/48300000.epwmss/48300180.eqep";
@@ -54,10 +54,10 @@ int main (int argc, char** argv)
 	
 	
 	
-	// Set the unit time period to 100,000,0 ns, or 0.001 seconds
+	// Set the unit time period to 10,00,000 ns, or 0.1 seconds
     
-    left_wheel.set_period(1000000L);
-    right_wheel.set_period(1000000L);
+    left_wheel.set_period(100000000L);
+    right_wheel.set_period(100000000L);
 
     
     controls::encoder_msg msg;
@@ -65,13 +65,13 @@ int main (int argc, char** argv)
 	while(ros::ok())
     {
     
-	float lw_rpm = (float)left_wheel.get_position()/3200*4;   
-	float rw_rpm = (float)right_wheel.get_position()/3200*4;
-
-	std::cout << "RPM_L = " << lw_rpm << " RPM_R = "<< rw_rpm <<std::endl;
+	float lw_vel = - (( (float)left_wheel.get_position() / 0.1)*3.14159*0.4064)/12800 ;   
+	float rw_vel = - (( (float)right_wheel.get_position()/0.1)*3.14159*0.4064)/12800 ;
 	
-	msg.left_rpm = lw_rpm;	
-	msg.right_rpm = rw_rpm;
+	std::cout << "Vel_L = " << lw_vel << " vel_R = "<< rw_vel <<std::endl;
+	
+	msg.left_vel = lw_vel;	
+	msg.right_vel = rw_vel;
 
 	pub_encoder.publish(msg);
 	ros::spinOnce();  

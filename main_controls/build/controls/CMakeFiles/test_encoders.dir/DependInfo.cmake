@@ -22,10 +22,10 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
   "/home/debian/controls_on_beagle_bone/main_controls/devel/include"
-  "/home/debian/controls_on_beagle_bone/support_ws/src/diagnostic_updater/include"
   "/opt/ros/indigo/include"
   "/home/debian/ros_catkin_ws/install_isolated/include"
   "/usr/local/include"
+  "/home/debian/controls_on_beagle_bone/support_ws/src/diagnostic_updater/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

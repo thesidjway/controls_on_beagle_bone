@@ -11,7 +11,7 @@ try:
     from catkin.environment_cache import generate_environment_script
 except ImportError:
     # search for catkin package in all workspaces and prepend to path
-    for workspace in "/home/debian/controls_on_beagle_bone/main_controls/devel;/home/debian/controls_on_beagle_bone/support_ws/devel;/home/debian/controls/devel;/opt/ros/indigo;/home/debian/ros_catkin_ws/install_isolated".split(';'):
+    for workspace in "/home/debian/controls_on_beagle_bone/main_controls/devel;/opt/ros/indigo;/home/debian/ros_catkin_ws/install_isolated".split(';'):
         python_path = os.path.join(workspace, 'lib/python2.7/dist-packages')
         if os.path.isdir(os.path.join(python_path, 'catkin')):
             sys.path.insert(0, python_path)
