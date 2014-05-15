@@ -1,0 +1,2 @@
+controls
+-DCATKIN_DEVEL_PREFIX=/home/debian/controls_on_beagle_bone/main_controls/devel -DCMAKE_INSTALL_PREFIX=/home/debian/controls_on_beagle_bone/main_controls/install -G Unix Makefiles

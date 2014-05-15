@@ -1,0 +1,8 @@
+prefix=/home/debian/controls_on_beagle_bone/main_controls/devel
+
+Name: controls
+Description: Description of controls
+Version: 0.0.0
+Cflags: -I/home/debian/controls_on_beagle_bone/main_controls/devel/include
+Libs: -L/home/debian/controls_on_beagle_bone/main_controls/devel/lib 
+Requires: roscpp joy rospy sensor_msgs std_msgs diagnostic_updater joy message_runtime

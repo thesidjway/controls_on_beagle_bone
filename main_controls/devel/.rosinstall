@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/debian/controls_on_beagle_bone/main_controls/devel/setup.sh

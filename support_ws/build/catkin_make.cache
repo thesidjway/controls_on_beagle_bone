@@ -1,0 +1,2 @@
+diagnostic_updater:joy
+-DCATKIN_DEVEL_PREFIX=/home/debian/controls_on_beagle_bone/support_ws/devel -DCMAKE_INSTALL_PREFIX=/home/debian/controls_on_beagle_bone/support_ws/install -G Unix Makefiles

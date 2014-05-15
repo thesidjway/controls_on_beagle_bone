@@ -1,0 +1,8 @@
+prefix=/home/debian/controls_on_beagle_bone/support_ws/devel
+
+Name: diagnostic_updater
+Description: Description of diagnostic_updater
+Version: 1.8.7
+Cflags: -I/home/debian/controls_on_beagle_bone/support_ws/src/diagnostic_updater/include
+Libs: -L/home/debian/controls_on_beagle_bone/support_ws/devel/lib 
+Requires: diagnostic_msgs roscpp std_msgs

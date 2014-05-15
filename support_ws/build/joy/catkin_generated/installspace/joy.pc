@@ -1,0 +1,8 @@
+prefix=/home/debian/controls_on_beagle_bone/support_ws/install
+
+Name: joy
+Description: Description of joy
+Version: 1.10.0
+Cflags: 
+Libs: -L/home/debian/controls_on_beagle_bone/support_ws/install/lib 
+Requires: roscpp diagnostic_updater sensor_msgs
